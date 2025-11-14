@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { Menu, X, Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { SiX, SiFacebook, SiInstagram, SiLinkedin } from "react-icons/si";
-import aboutStats from "../data/about-stats.json";
 
 const GRAIN_MILL_URL = "https://www.rootlabsgrainmill.com";
 
@@ -208,102 +207,48 @@ function Hero() {
 }
 
 function About() {
-  const { clientProjects, prototypes, productManufacturing, patentsGranted } =
-    aboutStats as {
-      clientProjects: number;
-      prototypes: number;
-      productManufacturing: number;
-      patentsGranted: number;
-    };
-
   return (
-    <section id="about" className="bg-white py-16 md:py-20">
+    <section id="about" className="py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
-        <div className="grid gap-10 md:grid-cols-2 md:items-center">
-          {/* Left: text */}
+        <div className="grid gap-10 md:grid-cols-2">
           <div>
-            <p className="text-xs font-semibold tracking-[0.18em] text-sky-700 uppercase">
-              Engineering studio in Bengaluru
+            <h2 className="text-3xl font-bold tracking-tight">About Us</h2>
+            <p className="mt-4 text-slate-700">
+              RootLabs was founded by a team of Engineers in Bengaluru with the
+              intent of building products that improve the quality of life of
+              our customers while providing local employment and helping small
+              scale industries.
             </p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              Where creativity
-              <br className="hidden md:block" /> meets technology.
-            </h2>
-            <p className="mt-4 text-sm leading-relaxed text-slate-700 md:text-base">
-              RootLabs Engineering and Product Creators work at the intersection
-              of Mechanical, Electrical, Electronics and Computer Science
-              engineering to build proof-of-concept prototypes and products that
-              solve real-world problems.
+            <p className="mt-4 text-slate-700">
+              Innovative Expertise - We build innovative prototypes and products
+              using a combination of Mechanical, Electrical, Electronic and
+              Computer Engineering.
             </p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-700 md:text-base">
-              We specialise in taking ideas from sketches and conversations to
-              functional prototypes you can touch, test and iterate on, working
-              closely with small-scale industries and local manufacturers.
+            <p className="mt-4 text-slate-700">
+              Developing Prototypes - We are happy to develop prototypes for
+              your ideas at a cost. Please contact us if you have an innovative
+              idea that you want a prototype built for.
             </p>
-
-            <button
-              className="mt-6 inline-flex items-center rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-slate-900 shadow hover:bg-amber-300"
-              type="button"
-            >
-              Read more
-            </button>
-
-            {/* Stats row */}
-            <div className="mt-10 grid gap-6 sm:grid-cols-2 md:grid-cols-4">
-              <Stat value={`${clientProjects}+`} label="Client Projects" />
-              <Stat value={`${prototypes}+`} label="Prototypes" />
-              <Stat
-                value={`${productManufacturing}+`}
-                label="Product Manufacturing"
-              />
-              <Stat value={`${patentsGranted}+`} label="Patents Granted" />
-            </div>
+            <ul className="mt-4 space-y-2 text-sm text-slate-700">
+              <li>Product ideation and design</li>
+              <li>Prototype development and testing</li>
+              <li>Collaboration with small-scale industries</li>
+            </ul>
           </div>
-
-          {/* Right: image + badge */}
-          <div className="relative flex items-center justify-center">
-            <div className="relative overflow-hidden rounded-3xl bg-slate-900/5 shadow-xl ring-1 ring-slate-200">
+          <div className="rounded-3xl bg-white p-6 shadow-md ring-1 ring-slate-200">
+            <div className="relative overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-slate-200">
               <Image
                 src="/assets/img/about.jpg"
                 alt="Engineers working on a prototype"
                 width={600}
                 height={400}
-                className="h-full w-full max-h-[380px] max-w-full object-cover"
-              />
-            </div>
-
-            {/* IDA badge */}
-            <div className="absolute -bottom-6 -right-4 w-32 rounded-2xl bg-white p-2 shadow-xl ring-1 ring-slate-200 sm:w-40 md:w-44">
-              <Image
-                src="/assets/img/ida-award.png"
-                alt="IDA Design Awards Silver Winner"
-                width={200}
-                height={200}
-                className="h-auto w-full object-contain"
+                className="h-full w-full max-h-[360px] max-w-full object-contain"
               />
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
-}
-
-type StatProps = {
-  value: string;
-  label: string;
-};
-
-function Stat({ value, label }: StatProps) {
-  return (
-    <div className="flex flex-col">
-      <span className="text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">
-        {value}
-      </span>
-      <span className="mt-1 text-xs font-medium uppercase tracking-wide text-slate-500">
-        {label}
-      </span>
-    </div>
   );
 }
 
