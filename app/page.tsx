@@ -473,7 +473,7 @@ function Footer() {
             <div>
               <h4 className="mb-3 text-base font-semibold">Contact Us</h4>
               <p className="text-sm leading-relaxed text-slate-300">
-                755/8, 2nd Main, E Block, 2nd Stage,
+                755/8, 2nd Stage,
                 <br />
                 Rajajinagar, Bengaluru - 560010,
                 <br />
@@ -481,7 +481,7 @@ function Footer() {
                 <br />
                 <br />
                 <span className="font-semibold text-slate-100">Phone:</span> +91
-                7624883338
+                9738984610
                 <br />
                 <span className="font-semibold text-slate-100">
                   Email:
