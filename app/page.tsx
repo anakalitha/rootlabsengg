@@ -329,8 +329,7 @@ function Contact() {
               <div>
                 <div className="font-semibold">Location</div>
                 <div>
-                  RootLabs — 755/8, 2nd Main, E Block, 2nd Stage, Rajajinagar,
-                  Bengaluru - 560010, Karnataka, India
+                  RootLabs — 755/8, 2nd Stage, Rajajinagar, Bengaluru - 560010
                 </div>
               </div>
             </div>
@@ -338,7 +337,7 @@ function Contact() {
               <Phone className="mt-0.5 h-4 w-4 text-sky-700" />
               <div>
                 <div className="font-semibold">Phone</div>
-                <div>(+91) 7624883338</div>
+                <div>(+91) +91 9738984610</div>
               </div>
             </div>
             <div className="flex items-start gap-3">
