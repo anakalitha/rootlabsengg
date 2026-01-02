@@ -1,5 +1,7 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
+import { JsonLd, orgSchema, websiteSchema } from "./seo-schema";
 
 export const metadata: Metadata = {
   title: "RootLabs Engineering — Prototype & Product Creators",
@@ -17,9 +19,7 @@ export const metadata: Metadata = {
     "RootLabs",
   ],
   metadataBase: new URL("https://rootlabsengg.com"),
-  alternates: {
-    canonical: "/",
-  },
+  alternates: { canonical: "/" },
   robots: {
     index: true,
     follow: true,
@@ -72,7 +72,12 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
+
       <body className="min-h-screen bg-slate-50 text-slate-800 font-[Nunito]">
+        {/* Structured data for SEO + AI search */}
+        <JsonLd data={orgSchema()} />
+        <JsonLd data={websiteSchema()} />
+
         {children}
       </body>
     </html>
